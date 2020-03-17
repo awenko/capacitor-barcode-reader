@@ -38,6 +38,7 @@ public class BarcodeReaderPlugin extends Plugin {
     public void open(PluginCall call) {
         try {
             close();
+            saveCall(call);
             if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
                 Intent intent = new Intent(getActivity(), BarcodeReaderActivity.class);
                 startActivityForResult(call, intent, RequestCodes.Camera);
