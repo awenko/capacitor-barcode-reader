@@ -13,7 +13,8 @@
   "author": "Martin Kasa",
   "license": "MIT",
   "dependencies": {
-    "@capacitor/core": "latest"
+    "@capacitor/core": "latest",
+    "webcodecamjs": "git+https://github.com/awenko/webcodecamjs.git"
   },
   "devDependencies": {
     "typescript": "^3.2.4",
