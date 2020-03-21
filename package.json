@@ -43,9 +43,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/martinkasa/capacitor-barcode-reader"
+    "url": "https://github.com/awenko/capacitor-barcode-reader.git"
   },
   "bugs": {
-    "url": "https://github.com/martinkasa/capacitor-barcode-reader/issues"
+    "url": "https://github.com/awenko/capacitor-barcode-reader.git/issues"
   }
 }
