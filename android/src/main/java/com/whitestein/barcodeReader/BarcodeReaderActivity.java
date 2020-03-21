@@ -32,6 +32,8 @@ public class BarcodeReaderActivity extends AppCompatActivity {
         CodeScannerView scannerView = findViewById(R.id.scanner_view);
         mCodeScanner = new CodeScanner(this, scannerView);
         mCodeScanner.setFormats(Collections.singletonList(BarcodeFormat.QR_CODE));
+        mCodeScanner.setFormats(Collections.singletonList(BarcodeFormat.CODE_128));
+        mCodeScanner.setFormats(Collections.singletonList(BarcodeFormat.EAN_8));
 
         mCodeScanner.setDecodeCallback(new DecodeCallback() {
             @Override
