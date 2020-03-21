@@ -6,7 +6,7 @@
   "types": "dist/esm/index.d.ts",
   "scripts": {
     "build": "npm run clean && tsc",
-    "clean": "rm -rf ./dist",
+    "clean": "rimraf dist/*",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build"
   },
@@ -14,6 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "@capacitor/core": "latest",
+    "rimraf": "^3.0.2",
     "webcodecamjs": "git+https://github.com/awenko/webcodecamjs.git"
   },
   "devDependencies": {
