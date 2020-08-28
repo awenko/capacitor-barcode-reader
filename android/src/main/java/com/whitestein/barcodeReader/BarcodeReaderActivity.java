@@ -5,20 +5,20 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.content.LocalBroadcastManager;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import androidx.annotation.NonNull;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.View;
 
 import com.budiyev.android.codescanner.CodeScanner;
 import com.budiyev.android.codescanner.CodeScannerView;
 import com.budiyev.android.codescanner.DecodeCallback;
-import com.google.zxing.BarcodeFormat;
+
 import com.google.zxing.Result;
 import com.whitestein.capacitorbarcodereader.R;
 
-import java.util.Collections;
+
 
 import static com.whitestein.barcodeReader.BarcodeReaderPlugin.CLOSE_EVENT;
 
@@ -31,10 +31,6 @@ public class BarcodeReaderActivity extends AppCompatActivity {
         setContentView(R.layout.activity_barcode_reader);
         CodeScannerView scannerView = findViewById(R.id.scanner_view);
         mCodeScanner = new CodeScanner(this, scannerView);
-        mCodeScanner.setFormats(Collections.singletonList(BarcodeFormat.QR_CODE));
-        mCodeScanner.setFormats(Collections.singletonList(BarcodeFormat.CODE_128));
-        mCodeScanner.setFormats(Collections.singletonList(BarcodeFormat.EAN_8));
-
         mCodeScanner.setDecodeCallback(new DecodeCallback() {
             @Override
             public void onDecoded(@NonNull final Result result) {
